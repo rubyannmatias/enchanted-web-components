@@ -42,7 +42,7 @@ import { TOOLTIP_PLACEMENT } from '../../types/cssClassEnums';
 
 // Icon imports
 import '@hcl-software/enchanted-icons-web-component/dist/apps/es/items--search--empty';
-import '@hcl-software/enchanted-icons-web-component/dist/carbon/es/search'; // TODO switch to the correct icon
+import '@hcl-software/enchanted-icons-web-component/dist/apps/es/items--search--initial';
 
 import '@hcl-software/enchanted-icons-web-component/dist/carbon/es/chevron--sort--up';
 import '@hcl-software/enchanted-icons-web-component/dist/carbon/es/chevron--sort--down';
@@ -1048,7 +1048,7 @@ export class DxDataGrid extends DxAcBaseElement {
 	    } else {
 	      return html`
 					<div part="${DATA_GRID_PARTS.TABLE_BODY_CONTAINER}">
-						<dx-svg-icon .icon=${html`<icon-search size="128" color="rgba(0, 0, 0, 0.38)"></icon-items-search-empty>`} ?useCurrentColor=${true}></dx-svg-icon>
+						<dx-svg-icon .icon=${html`<icon-items-search-initial size="128" color="rgba(0, 0, 0, 0.38)"></icon-items-search-initial>`} ?useCurrentColor=${true}></dx-svg-icon>
 						<p data-testid="table-result-label" part="${DATA_GRID_PARTS.TABLE_RESULT_LABEL}">${this.getMessage('authoring.data.grid.initial.message')}</p>
 						<p part="${DATA_GRID_PARTS.TABLE_RESULT_DESCRIPTION}">
 								${this.isFeatureTagCloudEnabled
