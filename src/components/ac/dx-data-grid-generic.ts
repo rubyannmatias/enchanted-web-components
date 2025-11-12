@@ -45,7 +45,7 @@ import '@hcl-software/enchanted-icons-web-component/dist/carbon/es/arrow--up';
 import '@hcl-software/enchanted-icons-web-component/dist/carbon/es/arrow--down';
 
 import '@hcl-software/enchanted-icons-web-component/dist/apps/es/items--search--empty';
-import { svgIconInitialResult } from '../../static/assets/svg-output-initial-icon';
+import '@hcl-software/enchanted-icons-web-component/dist/carbon/es/search'; // TODO switch to the correct icon
 
 @customElement('dx-data-grid-generic')
 export class DxDataGridGeneric extends DxAcBaseElement {
@@ -1172,7 +1172,7 @@ export class DxDataGridGeneric extends DxAcBaseElement {
         console.warn(`${this.getMessage('output.message.no.content.sources.found')}, ${this.getMessage('output.message.contact.admin')}`);
         return html`
           <div part="${DATA_GRID_PARTS.TABLE_BODY_CONTAINER}"> 
-            <dx-svg-icon .icon=${html`<icon-items-search-empty></icon-items-search-empty>`} ?useCurrentColor=${true}></dx-svg-icon>
+            <dx-svg-icon .icon=${html`<icon-items-search-empty size="128"></icon-items-search-empty>`} ?useCurrentColor=${true}></dx-svg-icon>
             <p data-testid="table-result-label" part="${DATA_GRID_PARTS.TABLE_RESULT_LABEL}">${this.getMessage('output.message.no.content.sources.found')}</p>
             <p part="${DATA_GRID_PARTS.TABLE_RESULT_DESCRIPTION}">
             ${this.getMessage('output.message.contact.admin')}
@@ -1182,7 +1182,7 @@ export class DxDataGridGeneric extends DxAcBaseElement {
       } else {
         return html`
           <div part="${DATA_GRID_PARTS.TABLE_BODY_CONTAINER}">
-            <dx-svg-icon .icon=${svgIconInitialResult} ?useCurrentColor=${true}></dx-svg-icon>
+            <dx-svg-icon .icon=${html`<icon-search size="128"></icon-search>`} ?useCurrentColor=${true}></dx-svg-icon>
             <p data-testid="table-result-label" part="${DATA_GRID_PARTS.TABLE_RESULT_LABEL}">${this.getMessage('authoring.data.grid.initial.message')}</p>
             <p part="${DATA_GRID_PARTS.TABLE_RESULT_DESCRIPTION}">
                 ${this.isFeatureTagCloudEnabled

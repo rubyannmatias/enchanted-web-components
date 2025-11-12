@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
 import '../components/ac/dx-icon-button';
 import { ICON_BUTTON_SIZES } from '../types/cssClassEnums';
-import { svgIconSearch } from '../static/assets/svg-search';
+import { svgIconSearch } from '../_tests_/assets/svg-search';
 
 /**
  * @interface DxIconButtonProps

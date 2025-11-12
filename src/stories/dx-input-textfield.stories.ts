@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/web-components-vite';
 import { html } from 'lit';
 import '../components/ac/dx-input-textfield';
-import { svgIconClear } from '../static/assets/svg-clear';
-import { svgIconSearch } from '../static/assets/svg-search';
+import { svgIconClear } from '../_tests_/assets/svg-clear';
+import { svgIconSearch } from '../_tests_/assets/svg-search';
 
 /**
  * @interface DxInputTextfieldProps

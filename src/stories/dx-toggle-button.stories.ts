@@ -4,9 +4,9 @@ import '../components/ac/dx-toggle-button';
 import '../components/ac/dx-badge';
 import '../components/ac/dx-icon-button';
 // Icon imports
-import tagUrl from '../static/assets/tag.svg';
-import listUrl from '../static/assets/list.svg';
-import { svgClose } from '../static/assets/svg-close';
+import tagUrl from '../_tests_/assets/tag.svg';
+import listUrl from '../_tests_/assets/list.svg';
+import { svgClose } from '../_tests_/assets/svg-close';
 
 /**
  * @typedef DxToggleButtonProps
