@@ -37,7 +37,7 @@ export type DxDataGridColDefClickArgDetails = {
 export type DxDataGridColDef = {
   field: string;
   headerName?: string;
-  headerSubtitle?: (data: unknown, column: DxDataGridColDef) => string | undefined,
+  subtitle?: (data: unknown, column: DxDataGridColDef) => string | undefined,
   hideSortIcon?: boolean;
   editIcon?: boolean;
   editLink?: string

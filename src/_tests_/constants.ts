@@ -101,7 +101,7 @@ export const DX_DATA_GRID_PICKER_COLUMNS: DxDataGridColDef[] = [
     field: 'title', 
     headerName: 'Title',
     avatar: true,
-    headerSubtitle: (data) => {
+    subtitle: (data) => {
       return (data as SampleDataRow).subtitle;
     },
     isLink: (data) => {

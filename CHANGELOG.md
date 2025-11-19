@@ -3,7 +3,7 @@
 ## Unreleased
 
 ### Added
-- Added `headerSubtitle` part to `dx-data-grid-generic` component to display subtitle.
+- Added `subtitle` part to `dx-data-grid-generic` component.
 
 ### Fixed
 - Fix `dx-preview` component bug of previewing the same item will open the first index item in preview.

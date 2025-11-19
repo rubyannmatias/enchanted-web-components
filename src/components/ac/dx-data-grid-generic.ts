@@ -855,9 +855,9 @@ export class DxDataGridGeneric extends DxAcBaseElement {
           const rowContent = columnsObj
             .map((header: DxDataGridColDef) => {
               const rowValues = [getObjectValue(this.specialFields, data, header.field, header.keyForStringify)];
-              const headerSubtitle = header.headerSubtitle?.(data, header); 
+              const subtitle = header.subtitle?.(data, header); 
 
-              if (headerSubtitle) rowValues.push(headerSubtitle);
+              if (subtitle) rowValues.push(subtitle);
               
               return rowValues.join(', ');
             }).join(', ');
@@ -903,7 +903,7 @@ export class DxDataGridGeneric extends DxAcBaseElement {
               return html`
               <td 
                 part="${
-                  header.headerSubtitle && header.headerSubtitle(data, header)
+                  header.subtitle && header.subtitle(data, header)
                   ? DATA_GRID_PARTS.TABLE_CELL_CONTAINER_MULTI_LINES
                   : DATA_GRID_PARTS.TABLE_CELL_CONTAINER
                 } ${this.customeTableCellPart.replace('{index}', ind.toString())}"
@@ -938,9 +938,9 @@ export class DxDataGridGeneric extends DxAcBaseElement {
                           <span part="${DATA_GRID_PARTS.TABLE_CELL_TEXT}">${cellValue}</span>
                         </a>
                         ${
-                          header.headerSubtitle && header.headerSubtitle(data, header)
+                          header.subtitle && header.subtitle(data, header)
                           ? html`
-                            <p part="${DATA_GRID_PARTS.TABLE_CELL_SUBTITLE}">${header.headerSubtitle(data, header)}</p>
+                            <p part="${DATA_GRID_PARTS.TABLE_CELL_SUBTITLE}">${header.subtitle(data, header)}</p>
                           ` 
                           : nothing
                         }
