@@ -88,7 +88,7 @@ export class DxBreadcrumbs extends DxAcBaseElement {
                           .path="${path}"
                           key="breadcrumb-${index}"
                           exportparts="${this.exportParts}"
-                          .partProp="${BREADCRUMBS_PART.BREADCRUMBS_ITEM_LAST}"
+                          partProp="${BREADCRUMBS_PART.BREADCRUMBS_ITEM_LAST}"
                           data-testid="breadcrumbs-item"
                           aria-current="page"
                         />
