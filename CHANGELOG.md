@@ -7,6 +7,7 @@
 ### Fixed
 - Fixed `dx-breadcrumbs` component list styling by adding `list-style-type: none` to ensure proper rendering
 - Fixed the icon bug for sorting of `dx-data-grid`.
+- Fixed the style bug for filter button in `dx-toggle-button`.
 
 ### Changed
 
