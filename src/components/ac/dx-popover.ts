@@ -17,7 +17,7 @@ import '@hcl-software/enchanted-icons-web-component/dist/carbon/es/close';
 
 //helper import
 import { DxAcBaseElement } from "./dx-ac-base-element";
-import { LOCALE_DIRECTIONS } from '../constants.js';
+import { AUTO_SHOW_SESSION_KEY, LOCALE_DIRECTIONS } from '../constants.js';
 import { getCurrentDirection } from '../localization.js';
 import  { DxPopoverArrowPosition } from '../../types/dx-popover.js';
 import { POPOVER_PARTS } from "../../types/cssClassEnums";
@@ -48,12 +48,16 @@ export class DxPopover extends DxAcBaseElement {
 
   @property({ type: Boolean }) disableHover = false;
 
-  private hasAutoShown = false;
+  connectedCallback() {
+    super.connectedCallback();
 
-  protected firstUpdated() {
-    if (this.autoShowOnLoad && !this.hasAutoShown) {
-      this.open = true;
-      this.hasAutoShown = true;
+    if (this.autoShowOnLoad) {
+      const hasShown = sessionStorage.getItem(AUTO_SHOW_SESSION_KEY);
+
+      if (!hasShown) {
+        this.open = true;
+        sessionStorage.setItem(AUTO_SHOW_SESSION_KEY, 'true');
+      }
     }
   }
 

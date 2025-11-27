@@ -18,10 +18,10 @@ const meta: Meta = {
     showText: { control: 'boolean', description: 'Show the text section' },
     showCloseIcon: { control: 'boolean', description: 'Show close button inside popover' },
 
-    theme: {
+    inverse: {
       control: { type: 'radio' },
       options: ['light', 'dark'],
-      description: 'Theme variant for the popover',
+      description: 'Sets the popover color scheme',
     },
 
     arrow: {
@@ -58,7 +58,7 @@ const meta: Meta = {
     showLabel: false,
     showText: false,
     showCloseIcon: false,
-    theme: 'light',
+    inverse: 'light',
     arrow: undefined,
     withpadding: false,
     autoShowOnLoad: false,
@@ -84,7 +84,7 @@ type Story = StoryObj<{
   showLabel: boolean;
   showText: boolean;
   showCloseIcon: boolean;
-  theme: 'light' | 'dark';
+  inverse: 'light';
   arrow: DxPopoverArrowPosition | undefined;
   withpadding: boolean;
   autoShowOnLoad: boolean;
@@ -94,7 +94,8 @@ type Story = StoryObj<{
 export const DxPopoverStory: Story = {
   name: 'Default',
 
-  render: (args) => html`
+  render: (args) => {
+    return html`
     <dx-popover
       ?open=${args.open}
       .label=${args.label}
@@ -102,7 +103,7 @@ export const DxPopoverStory: Story = {
       ?showLabel=${args.showLabel}
       ?showText=${args.showText}
       ?showCloseIcon=${args.showCloseIcon}
-      .theme=${args.theme}
+      .inverse=${args.inverse}
       .arrow=${args.arrow}
       ?withpadding=${args.withpadding}
       ?autoShowOnLoad=${args.autoShowOnLoad}
@@ -113,5 +114,6 @@ export const DxPopoverStory: Story = {
         Hover or Click Me
       </button>
     </dx-popover>
-  `,
+  `;
+  }
 };
