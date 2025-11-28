@@ -5,6 +5,7 @@
 ### Added
 
 ### Fixed
+- Fixed the disabled state bug of `dx-icon-button`.
 
 ### Changed
 
@@ -18,7 +19,6 @@
 - Fixed `dx-breadcrumbs` component list styling by adding `list-style-type: none` to ensure proper rendering
 - Fixed the icon bug for sorting of `dx-data-grid`.
 - Fixed the style bug for filter button in `dx-toggle-button`.
-- Fixed the disabled state bug of `dx-icon-button`.
 
 ### Changed
 - Changed `dx-dialog` accessibility implementation to use Lit reactive state for `role`, `aria-label`, `tabindex`, and content visibility management
