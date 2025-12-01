@@ -5,12 +5,15 @@
 ### Added
 - Added a new storybook component for `dx-popover`.
 - Added new property for disabling popover on hover in `dx-popover`.
+- Added new `placement` and `size` property for `dx-menu` component.
 
 ### Fixed
 - Fixed the disabled state bug of `dx-icon-button`.
 
 ### Changed
 - Changed `dx-dialog` live region styling from a CSS class selector to a `part` attribute with `::part()` selector, ensuring proper accessibility and visual hiding inside shadow DOM. This resolves issues with screen reader announcements and visible text flashes on dialog open.
+- Refactored menu placement logic using a switch statment for clarity and maintainability.
+
 
 ### Breaking changes
 
@@ -38,7 +41,6 @@
 - Added `focusOnLoadingContainer()` public method in `dx-data-grid-generic` component
 - Added `focusDialog()` public method in `dx-dialog` component
 - Added `subtitle` part to `dx-data-grid-generic` component.
-- Added new `placement` and `size` property for `dx-menu` component.
 
 ### Fixed
 - Fixed screen reader accessibility in `dx-preview` component by adding proper ARIA labels, roles, and attributes
@@ -60,7 +62,6 @@
 - Added `aria-colcount`, `aria-rowcount`, and `aria-busy` attributes to table element
 - Added `role="status"` and `aria-label` to loading container
 - Wrapped table header and body in `<thead>` and `<tbody>` elements for better semantic structure
-- Refactored menu placement logic using a switch statment for clarity and maintainability.
 - Using debug instead of console as logging framework. `export DEBUG=enchanted-web-components:*` is enabling the specific debug messages
 
 ## 1.1.0
